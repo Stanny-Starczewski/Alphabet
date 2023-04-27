@@ -13,6 +13,7 @@
 		2974A69029F9F3E6001430FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2974A68E29F9F3E6001430FE /* Main.storyboard */; };
 		2974A69229F9F3E7001430FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2974A69129F9F3E7001430FE /* Assets.xcassets */; };
 		2974A69529F9F3E7001430FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2974A69329F9F3E7001430FE /* LaunchScreen.storyboard */; };
+		2974A69D29F9FE8A001430FE /* LetterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2974A69C29F9FE8A001430FE /* LetterCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		2974A69129F9F3E7001430FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2974A69429F9F3E7001430FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2974A69629F9F3E7001430FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2974A69C29F9FE8A001430FE /* LetterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				2974A68829F9F3E6001430FE /* AppDelegate.swift */,
 				2974A68A29F9F3E6001430FE /* SceneDelegate.swift */,
 				2974A68C29F9F3E6001430FE /* ViewController.swift */,
+				2974A69C29F9FE8A001430FE /* LetterCollectionViewCell.swift */,
 				2974A68E29F9F3E6001430FE /* Main.storyboard */,
 				2974A69129F9F3E7001430FE /* Assets.xcassets */,
 				2974A69329F9F3E7001430FE /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2974A69D29F9FE8A001430FE /* LetterCollectionViewCell.swift in Sources */,
 				2974A68D29F9F3E6001430FE /* ViewController.swift in Sources */,
 				2974A68929F9F3E6001430FE /* AppDelegate.swift in Sources */,
 				2974A68B29F9F3E6001430FE /* SceneDelegate.swift in Sources */,
