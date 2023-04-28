@@ -20,6 +20,7 @@ class ViewController: UIViewController {
         collectionView.register(SupplementaryView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "header")
         collectionView.register(SupplementaryView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: "footer")
         collectionView.translatesAutoresizingMaskIntoConstraints = false
+        collectionView.allowsMultipleSelection = false
         collectionView.collectionViewLayout = UICollectionViewFlowLayout()
     }
 
@@ -69,9 +70,20 @@ extension ViewController: UICollectionViewDataSource {
 }
 
 
- //не понимаю, зачем нам нужен был этот делегат?
-//extension ViewController: UICollectionViewDelegate {
+extension ViewController: UICollectionViewDelegate {
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath) as? LetterCollectionViewCell
+        cell?.titleLabel.font = UIFont.boldSystemFont(ofSize: 17)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath) as? LetterCollectionViewCell
+        cell?.titleLabel.font = UIFont.systemFont(ofSize: 17, weight: .regular)
+    }
+    
+}
+
     /*
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
@@ -89,7 +101,6 @@ extension ViewController: UICollectionViewDataSource {
     //задаёт минимальный отступ между ячейками
     */
     
-//}
 extension ViewController: UICollectionViewDelegateFlowLayout { // 1 Для управления расположением и размерами элементов (включая размеры хедера) нужно реализовать методы из протокола
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize { // 2 реализуем метод, получает на вход объект коллекции, layout и номер секции, а возвращает её (секции) размер.
         
