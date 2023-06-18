@@ -1,11 +1,6 @@
-//
-//  AlphabetTests.swift
-//  AlphabetTests
-//
-//  Created by Gennadii Kulikov on 17.06.2023.
-//
-
 import XCTest
+import SnapshotTesting
+@testable import Alphabet
 
 final class AlphabetTests: XCTestCase {
 
@@ -30,6 +25,12 @@ final class AlphabetTests: XCTestCase {
         measure {
             // Put the code you want to measure the time of here.
         }
+    }
+    
+    func testViewController() {
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()! // 1
+        
+        assertSnapshot(matching: vc, as: .image)                                             // 2
     }
 
 }

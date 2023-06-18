@@ -1,11 +1,6 @@
-//
-//  AlphabetUITestsLaunchTests.swift
-//  AlphabetUITests
-//
-//  Created by Gennadii Kulikov on 17.06.2023.
-//
-
 import XCTest
+import SnapshotTesting
+@testable import Alphabet 
 
 final class AlphabetUITestsLaunchTests: XCTestCase {
 
