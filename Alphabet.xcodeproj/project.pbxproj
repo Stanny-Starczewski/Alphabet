@@ -18,6 +18,8 @@
 		29A4728A2A3E98DF00455625 /* AlphabetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A472892A3E98DF00455625 /* AlphabetUITests.swift */; };
 		29A4728C2A3E98DF00455625 /* AlphabetUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A4728B2A3E98DF00455625 /* AlphabetUITestsLaunchTests.swift */; };
 		29A472992A3E990200455625 /* AlphabetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A472982A3E990200455625 /* AlphabetTests.swift */; };
+		29A472A12A3E9F9600455625 /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 29A472A02A3E9F9600455625 /* SnapshotTesting */; settings = {ATTRIBUTES = (Required, ); }; };
+		29A472A42A3EA12D00455625 /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 29A472A32A3EA12D00455625 /* SnapshotTesting */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29A472A42A3EA12D00455625 /* SnapshotTesting in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29A472A12A3E9F9600455625 /* SnapshotTesting in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +91,7 @@
 				29A472882A3E98DF00455625 /* AlphabetUITests */,
 				29A472972A3E990200455625 /* AlphabetTests */,
 				2974A68629F9F3E6001430FE /* Products */,
+				29A472A22A3EA12D00455625 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -133,6 +138,13 @@
 			path = AlphabetTests;
 			sourceTree = "<group>";
 		};
+		29A472A22A3EA12D00455625 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -167,6 +179,9 @@
 				29A4728E2A3E98DF00455625 /* PBXTargetDependency */,
 			);
 			name = AlphabetUITests;
+			packageProductDependencies = (
+				29A472A32A3EA12D00455625 /* SnapshotTesting */,
+			);
 			productName = AlphabetUITests;
 			productReference = 29A472872A3E98DF00455625 /* AlphabetUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
@@ -185,6 +200,9 @@
 				29A4729B2A3E990200455625 /* PBXTargetDependency */,
 			);
 			name = AlphabetTests;
+			packageProductDependencies = (
+				29A472A02A3E9F9600455625 /* SnapshotTesting */,
+			);
 			productName = AlphabetTests;
 			productReference = 29A472962A3E990200455625 /* AlphabetTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -221,6 +239,9 @@
 				Base,
 			);
 			mainGroup = 2974A67C29F9F3E6001430FE;
+			packageReferences = (
+				29A4729F2A3E9F9600455625 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
+			);
 			productRefGroup = 2974A68629F9F3E6001430FE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -622,6 +643,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		29A4729F2A3E9F9600455625 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-snapshot-testing";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		29A472A02A3E9F9600455625 /* SnapshotTesting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 29A4729F2A3E9F9600455625 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
+			productName = SnapshotTesting;
+		};
+		29A472A32A3EA12D00455625 /* SnapshotTesting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 29A4729F2A3E9F9600455625 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
+			productName = SnapshotTesting;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2974A67D29F9F3E6001430FE /* Project object */;
 }
