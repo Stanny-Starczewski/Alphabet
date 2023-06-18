@@ -30,6 +30,11 @@ final class AlphabetTests: XCTestCase {
     func testViewController() {
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()! // 1
         
+        
+        //не забудьте удалить это строку после первого прогона тестов, чтобы ваши скриншоты снова не перезаписались!
+        //  isRecording = true
+        // assertSnapshot(matching: vc, as: .image, record: true)
+        
         assertSnapshot(matching: vc, as: .image)                                             // 2
     }
 
